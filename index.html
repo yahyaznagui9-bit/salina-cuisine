@@ -3,44 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salina Cuisine Marocaine - Le Goût de l'Excellence</title>
+    <title>Salina Cuisine Marocaine</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #c5a059; --dark: #111; --light: #fdfdfd; --whatsapp: #25d366; }
-        body { font-family: 'Cairo', sans-serif; margin: 0; background: var(--light); color: var(--dark); overflow-x: hidden; }
-        
-        /* Navbar */
-        .nav { background: var(--dark); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 2000; border-bottom: 2px solid var(--gold); }
+        body { font-family: 'Cairo', sans-serif; margin: 0; background: var(--light); color: var(--dark); }
+        .nav { background: var(--dark); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid var(--gold); }
         .nav button { background: none; border: 1px solid var(--gold); color: var(--gold); padding: 7px 15px; cursor: pointer; border-radius: 5px; margin: 0 5px; font-weight: bold; }
-
-        /* Hero Header */
-        header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=1200'); background-size: cover; background-position: center; color: white; padding: 120px 20px; text-align: center; }
-        header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 0; }
-
+        header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img32.jpg'); background-size: cover; background-position: center; color: white; padding: 100px 20px; text-align: center; }
         .container { width: 92%; max-width: 1200px; margin: 40px auto; }
-        .section-title { text-align: center; color: var(--gold); margin: 60px 0 30px; font-family: 'Playfair Display', serif; font-size: 2.5rem; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
-
-        /* Grid System */
+        .section-title { text-align: center; color: var(--gold); margin: 50px 0 30px; font-family: 'Playfair Display', serif; font-size: 2.5rem; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; height: 100%; display: flex; flex-direction: column; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
-        .card-body { padding: 25px; flex-grow: 1; }
-        
-        /* Gallery */
-        <div class="gallery-grid">
-    <img src="mg52.jpg" onerror="this.src='mg52.jpeg'; this.onerror='this.src=https://images.unsplash.com/photo-1590004953392-5aba2e785943?w=400'" />
-    
-    <img src="img2.jpg" onerror="this.src='img2.jpeg'; this.onerror='this.src=https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=400'" />
-</div>
-
-        /* Articles Style */
-        .article-card { background: #fff; border-left: 5px solid var(--gold); padding: 20px; margin-bottom: 20px; border-radius: 0 10px 10px 0; box-shadow: 3px 3px 10px rgba(0,0,0,0.05); }
-
-        /* WhatsApp Button */
-        .btn-wa { display: block; background: var(--whatsapp); color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 15px; }
-
-        footer { background: var(--dark); color: white; text-align: center; padding: 50px 20px; margin-top: 80px; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; }
+        .card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+        .card-body { padding: 20px; }
+        .btn-wa { display: block; background: var(--whatsapp); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+        .gallery-grid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        footer { background: var(--dark); color: white; text-align: center; padding: 40px 20px; margin-top: 60px; }
     </style>
 </head>
 <body>
@@ -52,77 +32,64 @@
 
 <header>
     <h1 id="h-title">Salina Cuisine</h1>
-    <p id="h-sub">L'Authenticité Marocaine en Europe</p>
+    <p id="h-sub">Traiteur Marocain d'Excellence</p>
 </header>
 
 <div class="container">
-    
-    <h2 class="section-title" id="sec-1">Nos Spécialités / تخصصاتنا</h2>
+    <h2 class="section-title" id="sec-1">Nos Spécialités</h2>
     <div class="grid">
         <div class="card">
-            <img src="sweets.jpg" alt="Pâtisserie" onerror="this.src='https://images.unsplash.com/photo-1590004953392-5aba2e785943?w=500'">
+            <img src="sweets.jpg" alt="Pâtisserie">
             <div class="card-body">
                 <h3 id="p1-t">Pâtisserie Fine</h3>
-                <p id="p1-d">Des délices faits main avec les meilleurs ingrédients.</p>
-                <a href="https://wa.me/33758398857" class="btn-wa">Commander via WhatsApp</a>
+                <a href="https://wa.me/33758398857" class="btn-wa">Commander</a>
             </div>
         </div>
         <div class="card">
-            <img src="tagine.jpg" alt="Plats" onerror="this.src='https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=500'">
+            <img src="tagine.jpg" alt="Plats">
             <div class="card-body">
                 <h3 id="p2-t">Plats Traditionnels</h3>
-                <p id="p2-d">Couscous, Tagines et Pastillas selon la tradition.</p>
-                <a href="https://wa.me/33758398857" class="btn-wa">Commander via WhatsApp</a>
+                <a href="https://wa.me/33758398857" class="btn-wa">Commander</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="savory.jpg" alt="Salés">
+            <div class="card-body">
+                <h3 id="p3-t">Salés & Événements</h3>
+                <a href="https://wa.me/33758398857" class="btn-wa">Commander</a>
             </div>
         </div>
     </div>
 
-    <h2 class="section-title" id="sec-2">Galerie Photos / معرض الصور</h2>
+    <h2 class="section-title" id="sec-2">Galerie / معرض الصور</h2>
     <div class="gallery-grid">
-        <img src="img1.jpg" onerror="this.src='https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=400'">
-        <img src="img2.jpg" onerror="this.src='https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?w=400'">
-        <img src="img3.jpg" onerror="this.src='https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400'">
-        <img src="img4.jpg" onerror="this.src='https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400'">
-        <img src="img5.jpg" onerror="this.src='https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=400'">
-        <img src="img6.jpg" onerror="this.src='https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400'">
+        <img src="img33.jpg">
+        <img src="img34.jpg">
+        <img src="img35.jpg">
+        <img src="img36.jpg">
+        <img src="img37.jpg">
+        <img src="img40.jpg">
+        <img src="img53.jpg">
     </div>
-
-    <h2 class="section-title" id="sec-3">Art de la Table / أسرار الطبخ</h2>
-    <div class="article-card">
-        <h3 id="art1-t">L'histoire du Safran Marocain</h3>
-        <p id="art1-d">Le safran n'est pas seulement une épice, c'est l'or rouge du Maroc. Chez Salina Cuisine, nous utilisons du safran pur pour garantir une saveur royale à nos plats.</p>
-    </div>
-    <div class="article-card">
-        <h3 id="art2-t">Pourquoi choisir un traiteur traditionnel ?</h3>
-        <p id="art2-d">Choisir Salina, c'est choisir l'amour du fait maison. Loin des préparations industrielles, chaque commande est traitée avec soin et passion.</p>
-    </div>
-
 </div>
 
 <footer>
-    <p>Salina Cuisine Marocaine &copy; 2026</p>
-    <p>Paris - Europe | +33 7 58 39 88 57</p>
+    <p>Salina Cuisine Marocaine | +33 7 58 39 88 57</p>
 </footer>
 
 <script>
     const trans = {
-        fr: { h1: "Salina Cuisine", sub: "L'Authenticité Marocaine en Europe", p1t: "Pâtisserie Fine", p1d: "Des délices faits main.", p2t: "Plats Traditionnels", p2d: "Couscous, Tagines et Pastillas.", art1t: "L'histoire du Safran", art1d: "Le safran pur garantit une saveur royale.", art2t: "Pourquoi choisir Salina?", art2d: "Pour l'amour du fait maison.", dir: "ltr" },
-        ar: { h1: "سالينا للطبخ المغربي", sub: "أصالة المذاق المغربي في قلب أوروبا", p1t: "حلويات مغربية فاخرة", p1d: "حلويات منزلية بأجود المكونات المغربية.", p2t: "أطباق تقليدية", p2d: "كسكس، طواجن، وبسطيلة على الأصول.", art1t: "قصة الزعفران المغربي", art1d: "الزعفران الحر هو سر النكهة الملكية في أطباقنا.", art2t: "لماذا تختارين سالينا؟", art2d: "لأننا نطبخ بكل حب وشغف كما في المنزل.", dir: "rtl" }
+        fr: { title: "Salina Cuisine", sub: "Traiteur Marocain d'Excellence", p1: "Pâtisserie Fine", p2: "Plats Traditionnels", p3: "Salés & Événements", dir: "ltr" },
+        ar: { title: "سالينا للطبخ المغربي", sub: "أصالة المذاق المغربي في أوروبا", p1: "حلويات مغربية", p2: "أطباق تقليدية", p3: "مملحات ومناسبات", dir: "rtl" }
     };
-
     function setLang(lang) {
         const t = trans[lang];
         document.getElementById('mainHtml').dir = t.dir;
-        document.getElementById('h-title').innerText = t.h1;
+        document.getElementById('h-title').innerText = t.title;
         document.getElementById('h-sub').innerText = t.sub;
-        document.getElementById('p1-t').innerText = t.p1t;
-        document.getElementById('p1-d').innerText = t.p1d;
-        document.getElementById('p2-t').innerText = t.p2t;
-        document.getElementById('p2-d').innerText = t.p2d;
-        document.getElementById('art1-t').innerText = t.art1t;
-        document.getElementById('art1-d').innerText = t.art1d;
-        document.getElementById('art2-t').innerText = t.art2t;
-        document.getElementById('art2-d').innerText = t.art2d;
+        document.getElementById('p1-t').innerText = t.p1;
+        document.getElementById('p2-t').innerText = t.p2;
+        document.getElementById('p3-t').innerText = t.p3;
     }
 </script>
 </body>

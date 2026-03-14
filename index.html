@@ -8,35 +8,22 @@
     <style>
         :root { --gold: #c5a059; --dark: #111; --light: #fdfdfd; --whatsapp: #25d366; }
         body { font-family: 'Cairo', sans-serif; margin: 0; background: var(--light); color: var(--dark); line-height: 1.6; }
-        
-        /* Navigation */
         .nav { background: var(--dark); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 2000; border-bottom: 2px solid var(--gold); }
         .nav button { background: none; border: 1px solid var(--gold); color: var(--gold); padding: 7px 15px; cursor: pointer; border-radius: 5px; margin: 0 5px; font-weight: bold; }
-
-        /* Header */
         header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img32.jpg'); background-size: cover; background-position: center; color: white; padding: 100px 20px; text-align: center; }
         header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin: 0; }
-        header p { font-size: 1.2rem; }
-
         .container { width: 92%; max-width: 1200px; margin: 40px auto; }
         .section-title { text-align: center; color: var(--gold); margin: 60px 0 30px; font-family: 'Playfair Display', serif; font-size: 2.2rem; }
-
-        /* Products Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; display: flex; flex-direction: column; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; }
         .card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; }
-        .card-body { padding: 20px; flex-grow: 1; }
-        
-        /* Gallery */
+        .card-body { padding: 20px; }
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
         .gallery-grid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-
-        /* Articles */
         .article-card { background: #fff; padding: 25px; border-radius: 15px; border-top: 4px solid var(--gold); box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 20px; }
-
-        /* Button */
-        .btn-wa { display: block; background: var(--whatsapp); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 15px; }
-        
+        .btn-wa { display: block; background: var(--whatsapp); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 15px; transition: 0.3s; }
+        .btn-wa:hover { background: #1ebe57; transform: scale(1.02); }
+        .testimonial { background: #fdf6e9; padding: 30px; border-radius: 20px; text-align: center; border: 1px dashed var(--gold); margin-top: 40px; }
         footer { background: var(--dark); color: white; text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 3px solid var(--gold); }
     </style>
 </head>
@@ -57,87 +44,29 @@
     <h2 class="section-title" id="sec-1">Nos Spécialités</h2>
     <div class="grid">
         <div class="card">
-            <img src="sweets.jpg" onerror="this.src='sweets.jpeg'">
+            <img src="sweets.jpg" onerror="this.src='sweets.jpeg'; this.onerror='this.src=sweets.png'">
             <div class="card-body">
                 <h3 id="p1-t">Pâtisserie Fine</h3>
-                <a href="https://wa.me/33758398857" class="btn-wa">WhatsApp</a>
+                <a id="btn-wa1" href="https://wa.me/33758398857?text=Bonjour%20Salina%2C%20je%20souhaite%20commander%20vos%20pâtisseries%20fines" class="btn-wa">Commander mes Délices</a>
             </div>
         </div>
         <div class="card">
-            <img src="tagine.jpg" onerror="this.src='tagine.jpeg'">
+            <img src="tagine.jpg" onerror="this.src='tagine.jpeg'; this.onerror='this.src=tagine.png'">
             <div class="card-body">
                 <h3 id="p2-t">Plats Traditionnels</h3>
-                <a href="https://wa.me/33758398857" class="btn-wa">WhatsApp</a>
+                <a id="btn-wa2" href="https://wa.me/33758398857?text=Bonjour%20Salina%2C%20je%20souhaite%20commander%20vos%20plats%20traditionnels" class="btn-wa">Commander mon Plat</a>
             </div>
         </div>
         <div class="card">
-            <img src="savory.jpg" onerror="this.src='savory.jpeg'">
+            <img src="savory.jpg" onerror="this.src='savory.jpeg'; this.onerror='this.src=savory.png'">
             <div class="card-body">
                 <h3 id="p3-t">Salés & Événements</h3>
-                <a href="https://wa.me/33758398857" class="btn-wa">WhatsApp</a>
+                <a id="btn-wa3" href="https://wa.me/33758398857?text=Bonjour%20Salina%2C%20je%20souhaite%20plus%20d'infos%20sur%20vos%20buffets%20salés" class="btn-wa">Demander un Devis</a>
             </div>
         </div>
     </div>
 
-    <h2 class="section-title" id="sec-2">Galerie Photos</h2>
+    <h2 class="section-title" id="sec-2">Galerie Photos / معرض الصور</h2>
     <div class="gallery-grid">
         <img src="img33.jpg" onerror="this.src='img33.jpeg'">
-        <img src="img34.jpg" onerror="this.src='img34.jpeg'">
-        <img src="img35.jpg" onerror="this.src='img35.jpeg'">
-        <img src="img36.jpg" onerror="this.src='img36.jpeg'">
-        <img src="img37.jpg" onerror="this.src='img37.jpeg'">
-        <img src="img40.jpg" onerror="this.src='img40.jpeg'">
-        <img src="img53.jpg" onerror="this.src='img53.jpeg'">
-    </div>
-
-    <h2 class="section-title" id="sec-3">Art de la Table</h2>
-    <div class="article-card">
-        <h3 id="art1-t">Qualité Premium</h3>
-        <p id="art1-d">Nous sélectionnons rigoureusement nos ingrédients pour garantir un goût authentique.</p>
-    </div>
-    <div class="article-card">
-        <h3 id="art2-t">Savoir-faire</h3>
-        <p id="art2-d">Chaque plat est préparé dans le respect des recettes ancestrales marocaines.</p>
-    </div>
-
-</div>
-
-<footer>
-    <p>Salina Cuisine Marocaine | +33 7 58 39 88 57</p>
-    <p>Paris - Europe</p>
-</footer>
-
-<script>
-    const trans = {
-        fr: { 
-            title: "Salina Cuisine", sub: "Traiteur Marocain d'Excellence", 
-            p1: "Pâtisserie Fine", p2: "Plats Traditionnels", p3: "Salés & Événements",
-            art1t: "Qualité Premium", art1d: "Nous sélectionnons rigoureusement nos ingrédients pour garantir un goût authentique.",
-            art2t: "Savoir-faire", art2d: "Chaque plat est préparé dans le respect des recettes ancestrales marocaines.",
-            dir: "ltr" 
-        },
-        ar: { 
-            title: "سالينا للطبخ المغربي", sub: "أصالة المذاق المغربي في أوروبا", 
-            p1: "حلويات مغربية", p2: "أطباق تقليدية", p3: "مملحات ومناسبات",
-            art1t: "جودة ممتازة", art1d: "نختار مكوناتنا بعناية فائقة لضمان نكهة مغربية أصيلة.",
-            art2t: "خبرة تقليدية", art2d: "كل طبق يتم تحضيره باحترام تام للوصفات المتوارثة.",
-            dir: "rtl" 
-        }
-    };
-
-    function setLang(lang) {
-        const t = trans[lang];
-        document.getElementById('mainHtml').dir = t.dir;
-        document.getElementById('h-title').innerText = t.title;
-        document.getElementById('h-sub').innerText = t.sub;
-        document.getElementById('p1-t').innerText = t.p1;
-        document.getElementById('p2-t').innerText = t.p2;
-        document.getElementById('p3-t').innerText = t.p3;
-        document.getElementById('art1-t').innerText = t.art1t;
-        document.getElementById('art1-d').innerText = t.art1d;
-        document.getElementById('art2-t').innerText = t.art2t;
-        document.getElementById('art2-d').innerText = t.art2d;
-    }
-</script>
-</body>
-</html>
+        <img src="img

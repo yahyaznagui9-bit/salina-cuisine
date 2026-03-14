@@ -21,8 +21,7 @@
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
         .gallery-grid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
         .article-card { background: #fff; padding: 25px; border-radius: 15px; border-top: 4px solid var(--gold); box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 20px; }
-        .btn-wa { display: block; background: var(--whatsapp); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 15px; transition: 0.3s; }
-        .btn-wa:hover { background: #1ebe57; transform: scale(1.02); }
+        .btn-wa { display: block; background: var(--whatsapp); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 15px; }
         .testimonial { background: #fdf6e9; padding: 30px; border-radius: 20px; text-align: center; border: 1px dashed var(--gold); margin-top: 40px; }
         footer { background: var(--dark); color: white; text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 3px solid var(--gold); }
     </style>
@@ -40,33 +39,62 @@
 </header>
 
 <div class="container">
-    
     <h2 class="section-title" id="sec-1">Nos Spécialités</h2>
     <div class="grid">
         <div class="card">
-            <img src="sweets.jpg" onerror="this.src='sweets.jpeg'; this.onerror='this.src=sweets.png'">
+            <img src="sweets.jpg" onerror="this.src='sweets.jpeg'">
             <div class="card-body">
                 <h3 id="p1-t">Pâtisserie Fine</h3>
-                <a id="btn-wa1" href="https://wa.me/33758398857?text=Bonjour%20Salina%2C%20je%20souhaite%20commander%20vos%20pâtisseries%20fines" class="btn-wa">Commander mes Délices</a>
+                <a id="btn-wa1" href="https://wa.me/33758398857?text=Bonjour%20Salina" class="btn-wa">Commander</a>
             </div>
         </div>
         <div class="card">
-            <img src="tagine.jpg" onerror="this.src='tagine.jpeg'; this.onerror='this.src=tagine.png'">
+            <img src="tagine.jpg" onerror="this.src='tagine.jpeg'">
             <div class="card-body">
                 <h3 id="p2-t">Plats Traditionnels</h3>
-                <a id="btn-wa2" href="https://wa.me/33758398857?text=Bonjour%20Salina%2C%20je%20souhaite%20commander%20vos%20plats%20traditionnels" class="btn-wa">Commander mon Plat</a>
+                <a id="btn-wa2" href="https://wa.me/33758398857?text=Bonjour%20Salina" class="btn-wa">Commander</a>
             </div>
         </div>
         <div class="card">
-            <img src="savory.jpg" onerror="this.src='savory.jpeg'; this.onerror='this.src=savory.png'">
+            <img src="savory.jpg" onerror="this.src='savory.jpeg'">
             <div class="card-body">
                 <h3 id="p3-t">Salés & Événements</h3>
-                <a id="btn-wa3" href="https://wa.me/33758398857?text=Bonjour%20Salina%2C%20je%20souhaite%20plus%20d'infos%20sur%20vos%20buffets%20salés" class="btn-wa">Demander un Devis</a>
+                <a id="btn-wa3" href="https://wa.me/33758398857?text=Bonjour%20Salina" class="btn-wa">Commander</a>
             </div>
         </div>
     </div>
 
-    <h2 class="section-title" id="sec-2">Galerie Photos / معرض الصور</h2>
+    <h2 class="section-title" id="sec-2">Galerie / معرض الصور</h2>
     <div class="gallery-grid">
-        <img src="img33.jpg" onerror="this.src='img33.jpeg'">
-        <img src="img
+        <img src="img33.jpg"><img src="img34.jpg"><img src="img35.jpg"><img src="img36.jpg">
+        <img src="img37.jpg"><img src="img40.jpg"><img src="img53.jpg">
+    </div>
+
+    <div class="testimonial">
+        <p id="testi">"La meilleure Pastilla que j'ai mangée à Paris !"</p>
+        <p><strong>- Sarah B.</strong></p>
+    </div>
+</div>
+
+<footer>
+    <p>Salina Cuisine Marocaine | +33 7 58 39 88 57</p>
+</footer>
+
+<script>
+    const trans = {
+        fr: { title: "Salina Cuisine", sub: "Traiteur Marocain d'Excellence", p1: "Pâtisserie Fine", p2: "Plats Traditionnels", p3: "Salés & Événements", testi: '"La meilleure Pastilla que j\'ai mangée à Paris !"', dir: "ltr" },
+        ar: { title: "سالينا للطبخ المغربي", sub: "أصالة المذاق المغربي في أوروبا", p1: "حلويات مغربية", p2: "أطباق تقليدية", p3: "مملحات ومناسبات", testi: '"أفضل بسطيلة تذوقتها في باريس!"', dir: "rtl" }
+    };
+    function setLang(lang) {
+        const t = trans[lang];
+        document.getElementById('mainHtml').dir = t.dir;
+        document.getElementById('h-title').innerText = t.title;
+        document.getElementById('h-sub').innerText = t.sub;
+        document.getElementById('p1-t').innerText = t.p1;
+        document.getElementById('p2-t').innerText = t.p2;
+        document.getElementById('p3-t').innerText = t.p3;
+        document.getElementById('testi').innerText = t.testi;
+    }
+</script>
+</body>
+</html>

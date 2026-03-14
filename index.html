@@ -76,7 +76,24 @@
 <footer>
     <p>Salina Cuisine Marocaine | +33 7 58 39 88 57</p>
 </footer>
+<h2 class="section-title" id="sec-articles">Art & Engagement / فن الالتزام</h2>
+    <div class="articles-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 50px;">
+        
+        <div class="article-card" style="background: #fff; padding: 25px; border-radius: 15px; border-top: 4px solid var(--gold); box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <h3 id="art1-t" style="color: var(--gold);">Qualité Premium</h3>
+            <p id="art1-d">Nous sélectionnons rigoureusement nos ingrédients : épices du terroir marocain, huile d'olive pure et produits frais pour garantir un goût authentique à chaque bouchée.</p>
+        </div>
 
+        <div class="article-card" style="background: #fff; padding: 25px; border-radius: 15px; border-top: 4px solid var(--gold); box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <h3 id="art2-t" style="color: var(--gold);">Savoir-faire Traditionnel</h3>
+            <p id="art2-d">Chaque plat est préparé dans le respect total des recettes ancestrales. Notre cuisine est un voyage sensoriel direct vers les palais impériaux du Maroc.</p>
+        </div>
+
+        <div class="article-card" style="background: #fff; padding: 25px; border-radius: 15px; border-top: 4px solid var(--gold); box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <h3 id="art3-t" style="color: var(--gold);">Sur Mesure</h3>
+            <p id="art3-d">Que ce soit pour un événement familial ou une envie gourmande, nous adaptons nos menus à vos besoins avec une présentation élégante et soignée.</p>
+        </div>
+    </div>
 <script>
     const trans = {
         fr: { title: "Salina Cuisine", sub: "Traiteur Marocain d'Excellence", p1: "Pâtisserie Fine", p2: "Plats Traditionnels", p3: "Salés & Événements", dir: "ltr" },
@@ -91,6 +108,41 @@
         document.getElementById('p2-t').innerText = t.p2;
         document.getElementById('p3-t').innerText = t.p3;
     }
-</script>
+</script>const trans = {
+        fr: { 
+            title: "Salina Cuisine", 
+            sub: "Traiteur Marocain d'Excellence", 
+            p1: "Pâtisserie Fine", p2: "Plats Traditionnels", p3: "Salés & Événements",
+            art1t: "Qualité Premium", art1d: "Nous sélectionnons rigoureusement nos ingrédients : épices du terroir, huile d'olive pure et produits frais.",
+            art2t: "Savoir-faire Traditionnel", art2d: "Chaque plat est préparé dans le respect total des recettes ancestrales marocaines.",
+            art3t: "Sur Mesure", art3d: "Nous adaptons nos menus à vos besoins avec une présentation élégante pour tous vos événements.",
+            dir: "ltr" 
+        },
+        ar: { 
+            title: "سالينا للطبخ المغربي", 
+            sub: "أصالة المذاق المغربي في أوروبا", 
+            p1: "حلويات مغربية", p2: "أطباق تقليدية", p3: "مملحات ومناسبات",
+            art1t: "جودة ممتازة", art1d: "نختار مكوناتنا بعناية فائقة: توابل مغربية أصيلة، زيت زيتون بكر، ومواد طازجة لضمان مذاق لا يقاوم.",
+            art2t: "خبرة تقليدية", art2d: "كل طبق يتم تحضيره باحترام تام للوصفات المغربية الأصيلة المتوارثة عبر الأجيال.",
+            art3t: "حسب الطلب", art3d: "نكيف قوائم طعامنا حسب احتياجاتكم، مع تقديم أنيق وعصري يناسب جميع مناسباتكم.",
+            dir: "rtl" 
+        }
+    };
+
+    function setLang(lang) {
+        const t = trans[lang];
+        document.getElementById('mainHtml').dir = t.dir;
+        document.getElementById('h-title').innerText = t.title;
+        document.getElementById('h-sub').innerText = t.sub;
+        document.getElementById('p1-t').innerText = t.p1;
+        document.getElementById('p2-t').innerText = t.p2;
+        document.getElementById('p3-t').innerText = t.p3;
+        document.getElementById('art1-t').innerText = t.art1t;
+        document.getElementById('art1-d').innerText = t.art1d;
+        document.getElementById('art2-t').innerText = t.art2t;
+        document.getElementById('art2-d').innerText = t.art2d;
+        document.getElementById('art3-t').innerText = t.art3t;
+        document.getElementById('art3-d').innerText = t.art3d;
+    }
 </body>
 </html>

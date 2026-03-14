@@ -28,9 +28,11 @@
         .card-body { padding: 25px; flex-grow: 1; }
         
         /* Gallery */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
-        .gallery-grid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; transition: 0.3s; cursor: pointer; }
-        .gallery-grid img:hover { transform: scale(1.05); z-index: 10; }
+        <div class="gallery-grid">
+    <img src="mg52.jpg" onerror="this.src='mg52.jpeg'; this.onerror='this.src=https://images.unsplash.com/photo-1590004953392-5aba2e785943?w=400'" />
+    
+    <img src="img2.jpg" onerror="this.src='img2.jpeg'; this.onerror='this.src=https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=400'" />
+</div>
 
         /* Articles Style */
         .article-card { background: #fff; border-left: 5px solid var(--gold); padding: 20px; margin-bottom: 20px; border-radius: 0 10px 10px 0; box-shadow: 3px 3px 10px rgba(0,0,0,0.05); }

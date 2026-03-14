@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="mainHtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بنة بلادي - Moroccan Flavors</title>
+    <style>
+        :root { --main-color: #d4a373; --dark-color: #582f0e; --green-wa: #25d366; --blue-mail: #ea4335; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: #fefae0; color: #333; transition: 0.3s; }
+        
+        .lang-switcher { background: #333; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        .lang-switcher button { background: #fff; border: 2px solid var(--main-color); padding: 6px 12px; margin: 3px; cursor: pointer; border-radius: 20px; font-weight: bold; }
+
+        header { background: var(--dark-color); color: white; text-align: center; padding: 3rem 1rem; border-bottom: 5px solid var(--main-color); }
+        
+        .container { width: 90%; max-width: 1100px; margin: auto; padding: 20px 0; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center; }
+        .card img { width: 100%; height: 250px; object-fit: cover; background: #ddd; }
+        
+        .btn-whatsapp { display: block; background: var(--green-wa); color: white; padding: 12px; text-decoration: none; font-weight: bold; margin: 10px 20px; border-radius: 12px; }
+        .btn-email { display: block; background: var(--blue-mail); color: white; padding: 12px; text-decoration: none; font-weight: bold; margin: 0 20px 20px; border-radius: 12px; }
+        
+        .contact-info { background: #fff; padding: 20px; border-radius: 15px; margin-top: 30px; border: 2px dashed var(--main-color); }
+
+        footer { text-align: center; padding: 30px; background: var(--dark-color); color: white; margin-top: 40px; }
+        footer a { color: var(--main-color); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="lang-switcher">
+    <button onclick="changeLang('ar')">العربية 🇲🇦</button>
+    <button onclick="changeLang('fr')">Français 🇫🇷</button>
+    <button onclick="changeLang('en')">English 🇬🇧</button>
+    <button onclick="changeLang('ru')">Русский 🇷🇺</button>
+</div>
+
+<header>
+    <h1 id="title">بنة بلادي 🏠</h1>
+    <p id="subtitle">أشهى الحلويات والأكلات المغربية بأسعار تنافسية</p>
+</header>
+
+<div class="container">
+    <div class="grid">
+        <div class="card">
+            <img src="sweets.jpg" alt="Sweets"> 
+            <h3 id="p1-title">حلويات مغربية</h3>
+            <p id="p1-price">الثمن: 100 درهم</p>
+            <a href="https://wa.me/33758398857" class="btn-whatsapp btn-text-wa">اطلب عبر واتساب</a>
+        </div>
+
+        <div class="card">
+            <img src="tagine.jpg" alt="Tagine">
+            <h3 id="p2-title">طاجين مغربي</h3>
+            <p id="p2-price">الثمن: 60 درهم</p>
+            <a href="https://wa.me/33758398857" class="btn-whatsapp btn-text-wa">اطلب عبر واتساب</a>
+        </div>
+
+        <div class="card">
+            <img src="savory.jpg" alt="Savory">
+            <h3 id="p3-title">مملحات ومناسبات</h3>
+            <p id="p3-price">أثمنة مناسبة</p>
+            <a href="https://wa.me/33758398857" class="btn-whatsapp btn-text-wa">اطلب عبر واتساب</a>
+        </div>
+    </div>
+
+    <div class="contact-info">
+        <h2 id="contact-title">للتواصل المباشر:</h2>
+        <p>📧 <a href="mailto:nanousalina04@gmail.com" style="color: var(--blue-mail); font-weight: bold;">nanousalina04@gmail.com</a></p>
+        <p>📱 <span dir="ltr">+33 7 58 39 88 57</span></p>
+    </div>
+</div>
+
+<footer>
+    <p id="footer-text">&copy; 2026 جميع الحقوق محفوظة - بنة بلادي</p>
+    <p>Contact: <a href="mailto:nanousalina04@gmail.com">nanousalina04@gmail.com</a></p>
+</footer>
+
+<script>
+    const data = {
+        ar: { title: "بنة بلادي 🏠", subtitle: "أشهى الحلويات والأكلات المغربية بأسعار تنافسية", p1t: "حلويات مغربية", p1p: "100 درهم", p2t: "طاجين مغربي", p2p: "60 درهم", p3t: "مملحات ومناسبات", p3p: "أثمنة مناسبة", btnwa: "اطلب عبر واتساب", contact: "للتواصل المباشر:", foot: "جميع الحقوق محفوظة - بنة بلادي", dir: "rtl" },
+        fr: { title: "Saveurs du Maroc 🏠", subtitle: "Plats et pâtisseries à prix compétitifs", p1t: "Pâtisserie Marocaine", p1p: "100 DH", p2t: "Tagine Marocain", p2p: "60 DH", p3t: "Salés & Événements", p3p: "Prix abordables", btnwa: "Commander via WhatsApp", contact: "Contact Direct:", foot: "Tous droits réservés - Benat Bladi", dir: "ltr" },
+        en: { title: "Moroccan Taste 🏠", subtitle: "Delicious food at competitive prices", p1t: "Moroccan Sweets", p1p: "100 DH", p2t: "Moroccan Tagine", p2p: "60 DH", p3t: "Savory & Events", p3p: "Affordable Prices", btnwa: "Order via WhatsApp", contact: "Direct Contact:", foot: "All rights reserved - Benat Bladi", dir: "ltr" },
+        ru: { title: "Вкус Марокко 🏠", subtitle: "Вкусная еда по отличным ценам", p1t: "Марокканские сладости", p1p: "100 Дирхам", p2t: "Марокканский тажин", p2p: "60 Дирхам", p3t: "Закуски и Мероприятия", p3p: "Доступные цены", btnwa: "Заказать через WhatsApp", contact: "Свяжитесь с нами:", foot: "Все права защищены - Вкус Марокко", dir: "ltr" }
+    };
+
+    function changeLang(lang) {
+        document.getElementById('mainHtml').dir = data[lang].dir;
+        document.getElementById('title').innerText = data[lang].title;
+        document.getElementById('subtitle').innerText = data[lang].subtitle;
+        document.getElementById('p1-title').innerText = data[lang].p1t;
+        document.getElementById('p1-price').innerText = data[lang].p1p;
+        document.getElementById('p2-title').innerText = data[lang].p2t;
+        document.getElementById('p2-price').innerText = data[lang].p2p;
+        document.getElementById('p3-title').innerText = data[lang].p3t;
+        document.getElementById('p3-price').innerText = data[lang].p3p;
+        document.getElementById('contact-title').innerText = data[lang].contact;
+        document.getElementById('footer-text').innerText = data[lang].foot;
+        
+        const btns = document.querySelectorAll('.btn-text-wa');
+        btns.forEach(b => b.innerText = data[lang].btnwa);
+    }
+</script>
+
+</body>
+</html>
